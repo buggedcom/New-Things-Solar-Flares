@@ -1,0 +1,117 @@
+@keyframes ray_anim {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
+}
+
+.ray-box-wrapper{
+    z-index: 0;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+.ray-box {
+    position: relative;
+    width: 1px;
+    height: 1px;
+    top: 140px;
+    left: 140px;
+    right:0;
+    bottom:0;
+    animation: ray_anim 120s linear infinite;
+    //animation: ray_anim 1s linear infinite;
+    //background-color: red;
+}
+.ray {
+    //background:red;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 );
+    margin-left:10px;
+    border-radius:80% 80% 0 0;
+    position:absolute;
+    opacity:0.1;
+    transform-origin: center;
+}
+
+.ray1 {
+    height: 740px;
+    width: 100px;
+    top: 0px;
+    left: -59px;
+    transform: rotate(180deg);
+}
+.ray2 {
+    height: 740px;
+    width: 30px;
+    top: -94px;
+    left: -266px;
+    transform: rotate(220deg);
+}
+.ray3 {
+    height: 740px;
+    width: 100px;
+    top: -243px;
+    left: -406px;
+    transform: rotate(250deg);
+}
+.ray4 {
+    height: 740px;
+    width: 200px;
+    transform: rotate(305deg);
+    top: -543px;
+    left: -362px;
+}
+.ray5 {
+    height: 740px;
+    width: 100px;
+    transform: rotate(-5deg);
+    top: -730px;
+    left: -88px;
+}
+.ray6 {
+    height: 740px;
+    width: 100px;
+    transform: rotate(30deg);
+    top: -691px;
+    left: 127px;
+}
+.ray7 {
+    height: 740px;
+    width: 40px;
+    transform: rotate(70deg);
+    top: -495px;
+    left: 290px;
+}
+.ray8 {
+    height: 740px;
+    width: 70px;
+    transform: rotate(90deg);
+    top: -374px;
+    left: 330px;
+}
+.ray9 {
+    height: 740px;
+    width: 140px;
+    transform: rotate(120deg);
+    top: -180px;
+    left: 260px;
+}
+.ray10 {
+    height: 740px;
+    width: 50px;
+    transform: rotate(150deg);
+    top: -30px;
+    left: 160px;
+}
+
+
+body{
+    overflow: hidden;
+}
+

@@ -1,0 +1,174 @@
+.side-spot--wrapper {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: relative;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-spot--inner {
+    position: relative;
+    width:0px;
+    height: 0px;
+}
+
+.side-spot {
+    position: absolute;
+    cursor:pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition:all 4.8s ease-in;
+    mix-blend-mode: darken;
+
+    &.in {
+        opacity: 1 !important;
+    }
+}
+
+.side-spot--A {
+    margin-left: -49.5px;
+    margin-top: -10.5px;
+
+    @for $i from 0 through 360 {
+        &.side-spot--rotate-#{$i} {
+            transform: rotate(#{$i}deg) scale(0.15);
+            opacity: 1;
+
+            &.side-spot--out {
+                transform: rotate(#{$i}deg) scale(0);
+                opacity: 0;
+            }
+        }
+    }
+
+}
+
+.side-spot--B {
+    margin-left: -50px;
+    margin-top: -12.5px;
+
+    @for $i from 0 through 360 {
+        &.side-spot--rotate-#{$i} {
+            transform: rotate(#{$i}deg) scale(0.25);
+            opacity: 1;
+
+            &.side-spot--out {
+                transform: rotate(#{$i}deg) scale(0);
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.side-spot--C {
+    margin-left: -61px;
+    margin-top: -17px;
+
+    @for $i from 0 through 360 {
+        &.side-spot--rotate-#{$i} {
+            transform: rotate(#{$i}deg) scale(0.35);
+            opacity: 1;
+
+            &.side-spot--out {
+                transform: rotate(#{$i}deg) scale(0);
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.side-spot--M {
+    margin-left: -60.5px;
+    margin-top: -20.5px;
+
+    @for $i from 0 through 360 {
+        &.side-spot--rotate-#{$i} {
+            transform: rotate(#{$i}deg) scale(0.65);
+            opacity: 1;
+
+            &.side-spot--out {
+                transform: rotate(#{$i}deg) scale(0);
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.side-spot--X {
+    margin-left: -60.5px;
+    margin-top: -27.5px;
+
+    @for $i from 0 through 360 {
+        &.side-spot--rotate-#{$i} {
+            transform: rotate(#{$i}deg) scale(1);
+            opacity: 1;
+
+            &.side-spot--out {
+                transform: rotate(#{$i}deg) scale(0);
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.explosion-canvas {
+    display: block;
+    margin:0px;
+    z-index: 99;
+    //filter: contrast( 5 );
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch|Margarine');
+
+.date,
+.info {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin:auto;
+    width:100%;
+    text-align: center;
+    position: fixed;
+    z-index: 31;
+    color: rgb(247, 255, 189);
+    text-shadow: 1px 1px 0px rgb(27, 142, 183);
+}
+.date {
+    font-size:2.5rem;
+    font-family: "Cabin Sketch", sans-serif;
+    top: 100px;
+}
+.info{
+    font-size:1rem;
+    bottom: 55px;
+    font-family: "Margarine", sans-serif;
+    p {
+        line-height:1.2em;
+        margin-bottom:5px;
+    }
+}
+
+@media all and ( max-height: 768px ) {
+    .date {
+        font-size:2rem;
+        top: 30px;
+    }
+}
+
+@media all and ( max-height: 500px ) {
+    .date {
+        top: 30px;
+    }
+}
+
+@media all and ( max-height: 320px ) {
+    .date {
+        top: 15px;
+        font-size:2rem;
+    }
+}

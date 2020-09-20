@@ -1,0 +1,74 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+$animation-time: 60s;
+$inner-points-colour: rgb(252, 243, 170);
+$outer-points-colour: #fcdc8d;
+$core-colour:rgb(255, 249, 0);
+$core-border-colour: rgb(239, 234, 0);
+
+.sun {
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    .points {
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        transform: rotate(20deg);
+        background-color: $inner-points-colour;
+        z-index: 1;
+        animation: spin #{$animation-time} infinite;
+    }
+
+    .points:before {
+        content: '';
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        top: 0;
+        left: 0;
+        transform: rotate(30deg);
+        background-color: $inner-points-colour;
+    }
+
+    .points:after {
+        content: '';
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        top: 0;
+        left: 0;
+        transform: rotate(60deg);
+        background-color: $inner-points-colour;
+    }
+
+    .core {
+        position: absolute;
+        background-color: #{$core-colour};
+        border:1px solid #{$core-border-colour};
+        z-index: 2;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+    }
+}
+
+.sun--shadow {
+    border-radius: 50%;
+    box-shadow:0 0 43px 30px rgba(0, 0, 0, 0.2);
+}
+
