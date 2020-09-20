@@ -39,8 +39,8 @@ Visit [http://192.168.33.10](http://192.168.33.10) to start.
 
 Things to note
 --------------
-The UI is simple and fun, there are no interactive elements, just sit back and watch. Whilst the task only ask for information for 2016, the UI will automatically process the data all the way up to current day because it's really just a fun thing and nothing too serious.
+The UI is simple and fun, there are no interactive elements, just sit back and watch. Whilst the task only asked for information for 2016, the UI will automatically process the data all the way up to current day because it's really just a fun thing and nothing too serious.
 
-Due to the short time frame for the task, no tests have been written as the priority was getting the working UI up and running.            
+Due to the short time frame for the task, no tests have been written as the priority was getting the working UI up and running.
 
-Also, thibshas only been cross browser tested for Chrome, Firefox and Safari on desktop, although should probably work on mobile devices too. IE/Edge - who knows!
+Also, this has only been cross browser tested for Chrome, Firefox and Safari on desktop, although should probably work on mobile devices too. IE/Edge - who knows!
